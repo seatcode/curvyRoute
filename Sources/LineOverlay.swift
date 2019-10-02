@@ -30,7 +30,9 @@ public class LineOverlay: MKPolyline, LineOverlaying {
         return boundsMapRect
     }
 
-    public convenience init(origin: CLLocationCoordinate2D, destination: CLLocationCoordinate2D, style: LineOverlayStyle? = nil) {
+    public convenience init(origin: CLLocationCoordinate2D,
+                            destination: CLLocationCoordinate2D,
+                            style: LineOverlayStyle? = nil) {
         self.init(coordinates: [origin, destination], count: 2)
         coordinates = [origin, destination]
         if let style = style {
