@@ -26,13 +26,13 @@ public class LineOverlay: MKPolyline, LineOverlaying {
                                                      lineWidth: 3,
                                                      alpha: 0.15)
     public var boundsMapRect: MKMapRect = .world
-    override public var boundingMapRect: MKMapRect {
+    public override var boundingMapRect: MKMapRect {
         return boundsMapRect
     }
 
     public convenience init(origin: CLLocationCoordinate2D, destination: CLLocationCoordinate2D, style: LineOverlayStyle? = nil) {
         self.init(coordinates: [origin, destination], count: 2)
-        self.coordinates = [origin, destination]
+        coordinates = [origin, destination]
         if let style = style {
             self.style = style
         }

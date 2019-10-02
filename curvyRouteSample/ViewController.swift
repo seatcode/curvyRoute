@@ -1,19 +1,19 @@
-import UIKit
 import MapKit
+import UIKit
 
 class ViewController: UIViewController, MKMapViewDelegate {
-    @IBOutlet weak var mapView: MKMapView!
-    private let pointA = CLLocationCoordinate2DMake(41.375024, 2.149118) //Plaça d'Espanya, Barcelona
-    private let pointB = CLLocationCoordinate2DMake(41.380994, 2.185771) //Plaça Pau Vila, 1, Barcelona
+    @IBOutlet var mapView: MKMapView!
+    private let pointA = CLLocationCoordinate2DMake(41.375024, 2.149118) // Plaça d'Espanya, Barcelona
+    private let pointB = CLLocationCoordinate2DMake(41.380994, 2.185771) // Plaça Pau Vila, 1, Barcelona
     private let mapCenter = CLLocationCoordinate2DMake(41.379183, 2.168013)
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_: Bool) {
         mapView.delegate = self
         centerMap(mapCenter)
         addOverlays()
     }
 
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if let lineOverlay = overlay as? LineOverlay {
             return MapLineOverlayRenderer(lineOverlay)
         }

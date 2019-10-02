@@ -1,6 +1,6 @@
-import XCTest
 @testable import curvyRouteTests
+import XCTest
 
 XCTMain([
-    testCase(curvyRouteTests.allTests)
+    testCase(curvyRouteTests.allTests),
 ])

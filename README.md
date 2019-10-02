@@ -13,12 +13,11 @@ An easy way to draw a curvy line between two points on a map.
 - [x] Display a curve on a map
 - [x] Display a straight line on a map
 - [x] Customise the radius factor
-- [x] Customise the radius factor
 
 ## 📝 Requirements
 
 - iOS 9.0+
-- Swift 4.2
+- Swift 4.2+
 
 ### Installation
 
@@ -45,7 +44,7 @@ s.dependency 'curvyRoute'
 
 ### Example
 
-```
+```swift
 import UIKit
 import curvyRoute
 import MapKit

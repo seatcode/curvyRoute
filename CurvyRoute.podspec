@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description  = "Display curvy lines on a Map on iOS."
   s.homepage     = "https://github.com/metrolab/curvyRoute"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "SEAT:CODE" => "hello@metropolis-lab.io" }
+  s.author             = { "Metropolis:Lab" => "hello@metropolis-lab.io" }
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/metrolab/CurvyRoute.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
