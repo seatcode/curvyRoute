@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "CurvyRoute"
+  s.name         = "curvyRoute"
   s.version      = "0.1"
   s.summary      = "Curvy routes"
   s.description  = "Display curvy lines on a Map on iOS."

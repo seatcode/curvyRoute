@@ -5,6 +5,12 @@ public struct LineOverlayStyle {
     var strokeColor: UIColor
     var lineWidth: CGFloat
     var alpha: CGFloat
+
+    public init(strokeColor: UIColor, lineWidth: CGFloat, alpha: CGFloat) {
+        self.strokeColor = strokeColor
+        self.lineWidth = lineWidth
+        self.alpha = alpha
+    }
 }
 
 public protocol LineOverlaying {

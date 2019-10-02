@@ -4,7 +4,7 @@ import MapKit
 public class MapLineOverlayRenderer: MKOverlayPathRenderer {
     private let lineOverlay: LineOverlay
 
-    init(_ lineOverlay: LineOverlay) {
+    public init(_ lineOverlay: LineOverlay) {
         self.lineOverlay = lineOverlay
         super.init(overlay: lineOverlay)
         self.lineWidth = lineOverlay.style.lineWidth
