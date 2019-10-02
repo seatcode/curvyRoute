@@ -1,0 +1,12 @@
+# https://github.com/nicklockwood/SwiftFormat#rules
+# https://github.com/nicklockwood/SwiftFormat/blob/master/CHANGELOG.md
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
+
+# Swift version
+--swiftversion 5.1
+
+# file options
+--exclude Sources/unstringify/Internal/template.swift
+
+# rules
+--disable redundantReturn
