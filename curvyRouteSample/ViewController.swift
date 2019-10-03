@@ -30,7 +30,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.addOverlay(LineOverlay(origin: pointA, destination: pointB))
         let arc = ArcOverlay(origin: pointA, destination: pointB,
                              style: LineOverlayStyle(strokeColor: .systemTeal, lineWidth: 4, alpha: 1))
-        arc.radiusFactor = 0.5
+        arc.radiusMultiplier = 1.0
         mapView.addOverlay(arc)
     }
 }

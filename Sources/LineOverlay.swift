@@ -16,8 +16,9 @@ public struct LineOverlayStyle {
 public protocol LineOverlaying {
     var coordinates: [CLLocationCoordinate2D] { get }
     var style: LineOverlayStyle { get }
-    func path(_ origin: CGPoint, _ destination: CGPoint) -> CGMutablePath
     var boundsMapRect: MKMapRect { get set }
+
+    func path(_ origin: CGPoint, _ destination: CGPoint) -> CGMutablePath
 }
 
 public class LineOverlay: MKPolyline, LineOverlaying {
@@ -26,7 +27,7 @@ public class LineOverlay: MKPolyline, LineOverlaying {
                                                      lineWidth: 3,
                                                      alpha: 0.15)
     public var boundsMapRect: MKMapRect = .world
-    public override var boundingMapRect: MKMapRect {
+    override public var boundingMapRect: MKMapRect {
         return boundsMapRect
     }
 
@@ -49,13 +50,13 @@ public class LineOverlay: MKPolyline, LineOverlaying {
 }
 
 public class ArcOverlay: LineOverlay {
-    public var radiusFactor: CGFloat = 1.0
+    public var radiusMultiplier: CGFloat = 1.0
 
-    public override func path(_ origin: CGPoint, _ destination: CGPoint) -> CGMutablePath {
+    override public func path(_ origin: CGPoint, _ destination: CGPoint) -> CGMutablePath {
         let path = CGMutablePath()
         path.move(to: origin)
         let utils = ControlPointUtilities()
-        let controlPoint = utils.controlPoint(origin, destination, radiusFactor: radiusFactor)
+        let controlPoint = utils.controlPoint(origin, destination, radiusMultiplier: radiusMultiplier)
         path.addQuadCurve(to: destination, control: controlPoint)
         return path
     }
