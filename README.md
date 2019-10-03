@@ -12,7 +12,7 @@ An easy way to draw a curvy line between two points on a map.
 
 - [x] Display a curve on a map
 - [x] Display a straight line on a map
-- [x] Customise the radius factor
+- [x] Customise the radius multiplier
 
 ## 📝 Requirements
 
