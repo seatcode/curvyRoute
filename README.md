@@ -19,7 +19,7 @@ An easy way to draw a curvy line between two points on a map.
 - iOS 8.0+
 - Swift 4.2+
 
-### Installation
+### 🛠 Installation
 
 There are several methods to install curvyRoute:
 
@@ -42,7 +42,7 @@ s.dependency 'curvyRoute'
 **Note:** *If your app is not modularized, simply add `pod 'curvyRoute'` to your `Podfile` too.*
 	
 
-### Example
+### 👉🏼 Example
 
 ```swift
 import MapKit
@@ -70,17 +70,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.addOverlay(LineOverlay(origin: pointA, destination: pointB))
         let arc = ArcOverlay(origin: pointA, destination: pointB,
                              style: LineOverlayStyle(strokeColor: .systemTeal, lineWidth: 4, alpha: 1))
-        arc.radiusFactor = 0.5
+        arc.radiusMultiplier = 0.5
         mapView.addOverlay(arc)
     }
 }
 ```
+
+### 🤔 What is *radiusMultiplier* ?
+
+This property will influence the shape of the arc. The default value is 1.
+
+![](docs/radiusMultiplier.png)
 
 ## 👨‍💻 Todo
 
 - [x] Animate the polyline
 - [x] ...
 
-## License
+## 📖 License
 
 curvyRoute is released under the MIT license. See `LICENSE` for details.
