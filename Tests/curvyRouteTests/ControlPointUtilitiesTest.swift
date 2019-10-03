@@ -22,17 +22,17 @@ class ControlUtilitiesTest: XCTestCase {
         XCTAssertEqual(controlPoint, CGPoint(x: 5, y: 5))
     }
 
-    func testThatControlPointIsCorrectWithCustomRadiusFactor() {
+    func testThatControlPointIsCorrectWithCustomradiusMultiplier() {
         let pointA = CGPoint(x: 0, y: 5)
         let pointB = CGPoint(x: 10, y: 10)
-        let controlPoint = sut.controlPoint(pointA, pointB, radiusFactor: 0.7)
+        let controlPoint = sut.controlPoint(pointA, pointB, radiusMultiplier: 0.7)
         XCTAssertEqual(controlPoint, CGPoint(x: 6.75, y: 4))
     }
 
-    func testThatControlPointIsCorrectWithDoubleRadiusFactor() {
+    func testThatControlPointIsCorrectWithDoubleradiusMultiplier() {
         let pointA = CGPoint(x: 0, y: 10)
         let pointB = CGPoint(x: 10, y: 10)
-        let controlPoint = sut.controlPoint(pointA, pointB, radiusFactor: 2)
+        let controlPoint = sut.controlPoint(pointA, pointB, radiusMultiplier: 2)
         XCTAssertEqual(controlPoint, CGPoint(x: 5.000000000000001, y: 0))
     }
 }

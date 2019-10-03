@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "curvyRoute"
-  s.version      = "0.2"
+  s.version      = "0.2.1"
   s.summary      = "Curvy routes"
   s.description  = "Display curvy lines on a Map on iOS."
   s.homepage     = "https://github.com/metrolab/curvyRoute"

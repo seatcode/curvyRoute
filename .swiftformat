@@ -10,3 +10,4 @@
 
 # rules
 --disable redundantReturn
+--disable specifiers

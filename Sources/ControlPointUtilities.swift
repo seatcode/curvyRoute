@@ -3,13 +3,13 @@ import Foundation
 
 final class ControlPointUtilities {
     /// Calculates the controlPoint
-    /// - Parameter radiusFactor: Default value: 1.0.
+    /// - Parameter radiusMultiplier: Defines the curve shape. Default value: 1.0.
     /// - Returns: CGPoint: The control point
     func controlPoint(_ origin: CGPoint,
                       _ destination: CGPoint,
-                      radiusFactor: CGFloat = 1) -> CGPoint {
+                      radiusMultiplier: CGFloat = 1) -> CGPoint {
         let centerPoint = center(origin, destination)
-        let radius = (distance(origin, destination) / 2) * radiusFactor
+        let radius = (distance(origin, destination) / 2) * radiusMultiplier
         let inclination = lineInclination(origin: origin, destination: destination)
         return pointOnCircle(center: centerPoint, radius: radius, angle: rad(inclination - 90))
     }

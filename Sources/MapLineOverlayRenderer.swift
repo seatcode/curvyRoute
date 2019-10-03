@@ -13,7 +13,7 @@ public class MapLineOverlayRenderer: MKOverlayPathRenderer {
         invalidatePath()
     }
 
-    public override func createPath() {
+    override public func createPath() {
         guard let originCoordinate = lineOverlay.coordinates.first,
             let destinationCoordinate = lineOverlay.coordinates.last else { return }
         let origin = point(for: MKMapPoint(originCoordinate))

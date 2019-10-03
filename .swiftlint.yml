@@ -41,7 +41,7 @@ opt_in_rules: # all opt-in rules up to version 0.35.0
   - fatal_error_message
   - file_header
 #  - file_name
-  - file_types_order
+  # - file_types_order
   - first_where
   - force_unwrapping
   - function_default_parameter_at_end
@@ -62,7 +62,7 @@ opt_in_rules: # all opt-in rules up to version 0.35.0
   - multiline_function_chains
   - multiline_literal_brackets
   - multiline_parameters
-  - multiline_parameters_brackets
+  # - multiline_parameters_brackets
   - nimble_operator
   - no_extension_access_modifier
   - no_grouping_extension
@@ -85,7 +85,7 @@ opt_in_rules: # all opt-in rules up to version 0.35.0
   - reduce_into
   - redundant_nil_coalescing
   - redundant_type_annotation
-  - required_deinit
+  # - required_deinit
   - required_enum_case
   - single_test_class
   - sorted_first_last
