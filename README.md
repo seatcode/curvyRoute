@@ -34,14 +34,6 @@ Add `curvyRoute` specs to your `Podfile`:
 pod 'curvyRoute'
 ```
 
-Add `curvyRoute` as dependency in the podspec of the module that contains the strings files:
-
-```ruby
-s.dependency 'curvyRoute'
-```
-**Note:** *If your app is not modularized, simply add `pod 'curvyRoute'` to your `Podfile` too.*
-	
-
 ### 👉🏼 Example
 
 ```swift
